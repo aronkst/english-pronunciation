@@ -1,5 +1,5 @@
 import React from "react";
-import Aux from "./Aux";
+import Aux from "./../hoc/Aux";
 
 const Header = () => {
   return (
@@ -19,7 +19,11 @@ const Header = () => {
         texts and the recording of the pronunciation.
       </p>
       <p>
-        The source code is available on{" "}
+        Developed by{" "}
+        <a href="https://github.com/aronkst" target="_blank" rel="noreferrer">
+          Aron
+        </a>
+        . The source code is available on{" "}
         <a
           href="https://github.com/aronkst/english-pronunciation"
           target="_blank"

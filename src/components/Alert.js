@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Aux from "./Aux";
+import Aux from "./../hoc/Aux";
 import BootstrapAlert from "react-bootstrap/Alert";
 import ProgressBar from "react-bootstrap/ProgressBar";
 import Row from "react-bootstrap/Row";

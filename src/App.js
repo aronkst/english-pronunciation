@@ -6,6 +6,7 @@ import Alert from "./components/Alert";
 import ModalNewText from "./components/ModalNewText";
 import ModalTrainingMode from "./components/ModalTrainingMode";
 import TrainingButton from "./components/TrainingButton";
+import Header from "./components/Header";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -78,7 +79,7 @@ function App() {
       const transcript = event.results[0][0].transcript.toLowerCase();
       setTalked(transcript);
 
-      const checkText = trainingText ? trainingText : text;
+      const checkText = trainingText || text;
 
       const value = Math.ceil(
         stringSimilarity.compareTwoStrings(checkText, transcript) * 100
@@ -102,7 +103,7 @@ function App() {
 
   const setGenerateText = (text = null) => {
     resetValues();
-    setText(text ? text : generateText());
+    setText(text || generateText());
   };
 
   const listen = (value) => {
@@ -127,7 +128,7 @@ function App() {
     setTrainingMode({
       active: true,
       variant: "primary",
-      message: "Iniciando o modo treino",
+      message: "Starting the training mode",
       text: "",
       texts: texts,
       score: score,
@@ -155,7 +156,7 @@ function App() {
         return {
           ...trainingData,
           text: trainingText,
-          message: "Novo texto gerado",
+          message: "New generated text",
         };
       }
 
@@ -172,7 +173,7 @@ function App() {
       if (trainingData.active) {
         return {
           ...trainingData,
-          message: "Se prepare, a gravação vai iniciar em breve",
+          message: "Get ready, the recording will start soon",
         };
       }
 
@@ -191,7 +192,7 @@ function App() {
 
         return {
           ...trainingData,
-          message: "Gravando, fale",
+          message: "Recording, speak",
         };
       }
 
@@ -215,7 +216,7 @@ function App() {
 
           return {
             ...trainingData,
-            message: "Parabens",
+            message: "Congratulations",
             points: points,
           };
         } else {
@@ -226,7 +227,7 @@ function App() {
 
             return {
               ...trainingData,
-              message: "Um novo texto vai ser gerado",
+              message: "A new text will be generated",
               attempts: 0,
             };
           } else {
@@ -234,7 +235,7 @@ function App() {
 
             return {
               ...trainingData,
-              message: "Tente novamente",
+              message: "Try again",
               attempts: attempts,
             };
           }
@@ -256,7 +257,7 @@ function App() {
       if (trainingData.active) {
         return {
           ...trainingData,
-          message: "Modo treino esta sendo finalizado",
+          message: "Training mode is being finalized",
         };
       }
 
@@ -279,24 +280,7 @@ function App() {
               beginTraining={trainingModeInit}
               stopTraining={trainingModeStop}
             />
-            <h1>Praticar Pronuncia em Ingles</h1>
-            <p>
-              Este aplicativo é destinado para praticar pronuncia em inglês.
-              Utilize o Google Chrome para que todas as funcionalidades
-              funcionem corretamente.
-            </p>
-            <p>
-              O texto no primeiro quadro deve ser gravado, utilizando o botão de
-              gravar no segundo quadro, e será calculado o quanto sua pronuncia
-              ficou certa, na barra de progresso, abaixo do quadro.
-            </p>
-            <p>
-              O Modo Treino funciona de maneira igual, apenas automatizando a
-              geração dos textos e a gravação da pronuncia.
-            </p>
-            <p>
-              Desenvolvido por Aron. O codigo fonte esta disponivel no Github.
-            </p>
+            <Header />
           </Col>
         </Row>
         <Alert

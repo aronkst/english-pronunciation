@@ -1,5 +1,5 @@
 import React from "react";
-import Aux from "./Aux";
+import Aux from "./../hoc/Aux";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import ProgressBar from "react-bootstrap/ProgressBar";

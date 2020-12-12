@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Aux from "./Aux";
+import Aux from "./../hoc/Aux";
 import Modal from "./Modal";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
