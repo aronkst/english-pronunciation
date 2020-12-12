@@ -65,7 +65,7 @@ const ModalNewText = (props) => {
   return (
     <Modal
       show={props.show}
-      title="Novo texto"
+      title="New text"
       body={modalBody}
       footer={modalFooter}
       handleClose={close}
