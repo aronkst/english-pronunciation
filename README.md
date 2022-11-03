@@ -1,6 +1,6 @@
 # English Pronunciation
 
-This is a project of a web application to practice pronunciation of sentences in English. It was developed using the JavaScript programming language with the [SvelteKit](https://kit.svelte.dev/) library.
+This is a project of a web application to practice pronunciation of sentences in English. It was developed using the JavaScript programming language with the [SvelteKit](https://kit.svelte.dev/).
 
 Browser APIs are used for [Speech To Text](https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition) and [Text To Speech](https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance) functionality. Whatever is spoken, will be converted to text, and will be compared with the text that must be pronounced. There is also the functionality to hear what should be pronounced, to know exactly how the pronunciation is.
 
