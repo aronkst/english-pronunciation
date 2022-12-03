@@ -1,3 +1,5 @@
+# Deprecated, use the [Practice English](https://github.com/aronkst/practice-english)
+
 # English Pronunciation
 
 This is a project of a web application to practice pronunciation of sentences in English. It was developed using the JavaScript programming language with the [SvelteKit](https://kit.svelte.dev/).
